@@ -18,7 +18,7 @@ button.onclick = () => {
   let employeeRatio = netSales * 0.08;
   let netEmployeeRatio = employeeRatio - parseInt(expenses.value || 0);
   let salary_of_each_employee =
-    netEmployeeRatio / parseInt(employeesNumber.value || 1);
+    netEmployeeRatio / parseFloat(employeesNumber.value || 1);
   result.innerHTML = `${Math.round(salary_of_each_employee)} جنيه`;
   managerOne.innerHTML =
     Math.round(salary_of_each_employee) +
@@ -50,3 +50,4 @@ closeM.onclick = function () {
   menue.classList.remove("open");
   document.body.classList.remove("menu-open");
 };
+
